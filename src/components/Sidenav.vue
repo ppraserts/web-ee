@@ -2,14 +2,17 @@
   <div class="sidenav">
     <div class="logo"><img src="../assets/logo2.png" width="55" height="90"> Exit Exam</div>
     <a href="#"><icon name="search"></icon> ตรวจสอบข้อมูลนักศึกษา</a>
-    <a href="#"><icon name="save"></icon> ระบบบันทึกข้อมูลพื้นฐาน</a>
+    <a v-b-toggle.collapse01 href="#"><icon name="save"></icon> ระบบบันทึกข้อมูลพื้นฐาน</a>
+    <b-collapse id="collapse01">
+        <router-link to="/examtime"><icon name="circle-notch"></icon> บันทึกจำนวนครั้งที่จัดสอบ</router-link>
+    </b-collapse>
     <a href="#"><icon name="book"></icon> ระบบเปิดรายวิชา</a>
-    <a href="#"><icon name="pen"></icon> ระบบลงทะเบียนสอบ</a>
-    <a v-b-toggle.collapse05 href="#"><icon name="database"></icon> ระบบประมวลผล</a>
-    <b-collapse id="collapse05">
+    <a v-b-toggle.collapse03 href="#"><icon name="pen"></icon> ระบบลงทะเบียนสอบ</a>
+    <b-collapse id="collapse03">
         <router-link to="/import"><icon name="circle-notch"></icon> นำเข้าผู้มีสิทธิ์ลงทะเบียนสอบจากฐานข้อมูลกลาง</router-link>
         <router-link to="/process"><icon name="circle-notch"></icon> ตรวจสอบ และยกเลิกเงื่อนไขการตรวจสอบคุณสมบัติผู้มีสิทธิ์ลงทะเบียนสอบวัดความรู้ก่อนสำเร็จการศึกษา</router-link>
     </b-collapse>
+    <a href="#"><icon name="database"></icon> ระบบประมวลผล</a>
     <a href="#"><icon name="chart-bar"></icon> รายงานในระบบลงทะเบียนสอบ</a>
     <a href="#"><icon name="chart-line"></icon> รายงานในระบบประมวลผล</a>
     <a href="#"><icon name="external-link-alt"></icon> กลับสู่ระบบ Exit Exam เดิม</a>
